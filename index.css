@@ -1,0 +1,650 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+    body{
+        max-width: 768px;
+        min-height: auto;
+        overflow-x: hidden;
+        overflow: hidden;
+        background: #000;
+    }
+	.header_body{
+		max-width: 768px;
+		margin: 0 auto;
+/*        background: #D9B779;*/
+	}
+	.hiddenmenu{
+		display: none;
+	}
+	.header_single{
+		position: fixed;
+		background: #F28972;
+        max-width: 768px; 
+        width: 100%;
+        height: 42px;
+        top: 0;
+        z-index: 4;
+
+	}
+	.titleimage{
+		width: 80px;
+		height: auto;
+	}
+
+/*MOBILE*/
+/*@media only all and (max-width: 768px){*/
+
+	body{
+		margin: 0;
+        overflow-x: hidden;
+    }
+	h1{color: #f0f;}
+	.header_single>h1{
+		display: none;
+	}
+
+	.lnb>h2{
+		display: none;
+    }
+	.lnb>ul{
+		display: none;
+	}
+	.gamebtn{
+		position: absolute;
+		top: 0;
+		width: 32px;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		margin: 5px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+    }
+	.gamebtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .gamelist {
+        position: absolute;
+        display: none;
+        top: 42px;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+        overflow:scroll;
+    }
+    .gamelist>li{
+        display: block;
+        width: 112px;
+        color: #fff;
+        font-size: 14px;
+        text-align: right;
+        padding: 3px;
+        background: #F28972;   
+    }
+    #gamelistul {
+/*        background: #547812;*/
+        padding: 0;
+    }
+    #gamelistul li {
+        display: block;
+        height: 136px;
+        padding: 0;
+    }
+    #gamelistul li:nth-child(even) {
+        background: #F28972;
+    }
+    #gamelistul li:nth-child(odd) {
+        background: #fff7f7;
+    }
+    
+    #gamelistul li a{
+        position: relative;
+        text-decoration: none;
+        color: #000;
+        font-style: normal;
+        display: block;   
+        width: 118px;
+        height: 130px;
+        font-weight: 400;
+    }
+        .gameImg{
+            position: relative;
+            display: block;
+            width: 110px;
+            height: 110px;
+            margin: 0 4px 0 4px;
+            padding-top: 4px;
+            border-radius: 15px;
+        }
+        .gameTitle, .comment{
+            font-style: normal;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        .gameTitle{
+            position: relative;
+            padding-left: 7px;   
+        }
+        .comment{
+            position: absolute;
+            right: 4px;
+            bottom: 0;
+            text-align: right;
+            font-size: 10px;
+        }
+    
+	.lnbbtn{
+		position: fixed;
+		top: 50%;
+        left: 0;
+		width: 26px;
+		height: 45px;
+	 	border: 0;
+		padding: 0;
+		margin: -1px;
+        margin-left: 2px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+        z-index: 2;
+	}
+	.lnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+        margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .lnbMenu{
+        position: fixed;
+        background: #fff;
+        width: 150px;
+        height: 100%;
+        top: 42px;
+        left: -150px;
+        z-index: 2;
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+    }
+    .lnbMenu ul li,
+    .lnbMenu ul li a,
+    .lnbMenu li,
+    .lnbMenu li a{
+        list-style-type: none;
+        text-decoration: initial;
+        color: #000;
+        height: 32px;
+    }
+    .lnbMenu a{
+        display: block;
+        box-sizing: border-box;
+        padding: 6px 0 6px 10px;
+        height: 32px;
+        line-height: 20px;
+        vertical-align: bottom;
+    }
+    .lnbMenu >li{
+        background: #c0c0c0;
+    }
+    .lnbMenu >li >a{
+        display: inline-block;
+        font-weight: 600;
+    }
+    .lnbMenu >li> button{
+        float: right;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        margin: 4px;
+        font-weight: 800;
+        font-size: 23px;
+        line-height: 14px;
+        border-radius: 4px;
+        background: #fff;
+        color: #c0c0c0;
+    }
+    .lnbMenu li{
+        display: block;
+    }
+    .lnbMenu ul{
+        padding: 0;
+    }
+	.search{
+		position: relative;
+        height: 42px;
+		margin-left: 42px;
+        padding-right: 37px;
+    }
+	.search [type="search"]{
+		position: relative;
+        width: 100%;
+		background-color: #F28972;	
+		border: 0;
+        padding: 0;
+/*		border-bottom: 2px solid #fff;*/
+        height: 32px;
+        top: 4px;
+	}
+	.search [type="submit"]{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 32px;
+		height: 32px;
+		color: rgba(0, 0, 0, 0);
+        margin: 0;
+		padding: 0;
+		margin: 5px;
+		border: 0;
+		background: rgba(0, 0, 0, 0);
+/*		border-bottom: 2px solid #fff;*/
+    }
+	.search>button>img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.header_body{
+		position: relative;
+        overflow: hidden;
+	}
+/*main Line Start*/
+	#main{
+		min-height: 200px;
+		position: relative;
+		margin: 47px 5px 5px 33px;
+	}
+    
+    #main> ul{
+        position: relative;
+        top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #main> ul >li{
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        margin: 7px 0;
+        padding: 0 15px;
+        cursor: pointer;
+        height: 0;/*js 5.에서 설정*/
+        background: #F2EEAE;
+        border-radius: 5px;
+    }
+    #main sup{
+        position: absolute;
+        top: 9px;
+        left: 18px;
+        display: block;
+        margin: 0 4px;
+        font-size: 10px;
+        color: #666;
+    }
+    .scatchTape{
+        position: relative;
+        width: 70px;
+        height: 17.4px;
+        top: 6px;
+    }
+    .scatchTape>div:nth-child(odd){
+        box-sizing: border-box;
+        border-right: 3.4px solid transparent;
+        border-left: 3.4px solid transparent;
+        border-top: 3.4px solid #f3bbcc;
+    }
+    .scatchTape>div:nth-child(even){
+        box-sizing: border-box;
+        border-right: 3.4px solid transparent;
+        border-left: 3.4px solid transparent;
+        border-bottom: 3.4px solid #f3bbcc;
+        
+    }
+    .scatchTape>div{
+        height: 17%;
+        
+    }
+        .triangle1{
+            top: 0;
+        }
+        .triangle2{
+            top: 3.4px;   
+        }
+        .triangle3{
+            top: 6.8px;   
+        }
+        .triangle4{
+            top: 10.2px;   
+        }
+        .triangle5{
+            top: 13.6px;   
+        }
+        .triangle6{
+            top: 17px;   
+        }
+    .circle1{
+        position: absolute;
+        width: 5px;
+        height: 10px;
+    }
+        .a{
+            top: 15px;
+        }
+        .b{
+            top: 40px;
+        }
+        .c{
+            top: 65px;
+        }
+        .d{
+            left: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .e{
+            right: 0px;   
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    #main >ul >li:first-child{
+        border-top: 0;   
+    }
+        .writeUserInfor{
+            display:inline-block;
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: #F2949C;
+            width: 160px;
+            height: 0;/*js 5.에서 설정*/
+            float: left;
+        }
+            .writeUserInfor >a{
+                display: inline-block;
+                width: 0;/*js 5.에서 설정*/
+                height: 0;/*js 5.에서 설정*/
+                float: left;
+            }
+            .userPic{
+                display: inline-block;
+                width: 0;/*js 5.에서 설정*/
+                height: 0;/*js 5.에서 설정*/
+                margin: 2px;
+                border-radius: 4px;
+                float: left;
+            }
+            .userName{
+                display: inline-block;
+                margin: 0;
+                padding: 32px 0 0 6px;
+                color: #000;
+/*                color: #FFC519;*/
+            }
+            .writeDate{
+                display: inline-block;
+                padding-left: 6px;
+                font-size: 10px;
+                margin: 0;
+                color: #666;
+            }
+            .circle{
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+            }
+            .writeDate{
+                position: relative;
+                top: 5px;
+                
+            }
+            .writeTitleDiv{
+                position: relative;
+                box-sizing: border-box;
+                padding: 10px 10px 0 10px;
+                height: 32px;
+                top: 32px;
+                background: #fff;
+                border-radius: 5px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+                .writeTitle{
+                    display: inline-block;
+                    font-weight: 300;
+                    text-overflow: ellipsis;
+                }
+        .hiddenView{
+            display: none;
+        }
+        .overView{
+            display: none;
+            position: relative;
+            box-sizing: border-box;
+            min-height: 220px;
+            top: 32px;
+            background: #fff;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            
+        }
+        .overView article{
+            display: block;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 8px;
+            min-height: 220px;
+        }
+        .countView{
+            box-sizing: border-box;
+            top: 0;/*js 5.에서 설정*/
+            margin: 1% 0;
+            width: 60%;
+            height: 60px;
+            font-size: 12px;
+            color: #666;
+            float: left;
+            background: #424242;
+            border-radius: 5px;
+        }
+            .countView div{
+                display: inline-block;
+                width: 30%;
+                float: left;
+            }
+                .countView span{
+                    display: inline-block;
+                    float: left;
+                }
+                .countView span:nth-child(even){
+                    display: inline;
+                    width: auto;
+                    line-height: 25px;
+                    vertical-align: middle;
+                    margin-left: 10%;
+                    text-align: right;
+                }
+                .countView img{
+                    width: auto;
+                    height: 32px;
+                    vertical-align: center;
+                }
+       .connectUser{
+/*            position: absolute;*/
+            margin: 1% 0;
+            top: 10px;
+            right: 10px;
+            width: auto;
+            width: 38%;
+            height: 0;/*js 5.에서 설정*/
+            font-size: 10px;
+            float: right;
+            background: #653323;
+            border-radius: 5px;
+        }
+            .connectUser ul{
+                padding: 0;
+                height: 40px;
+                width: 100%;
+                overflow: hidden
+            }
+            .connectUser li{
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                margin: 0 3px;
+                float: left;
+            }
+            .connectUser>ul>li>a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+            .connectPic{
+                height: 100%;
+                width: 100%;
+/*                border: 1px solid yellow;*/
+                border-radius: 4px;
+            }
+/*main Line End*/
+
+	.aside{
+		display: none;
+	}
+
+	.bottommenu{
+		position: fixed;
+        box-sizing: border-box;
+        max-width: 768px;   
+		width: 100%;
+        height: 40px;
+        padding: 4px;
+		background: #F28972;
+		bottom: 0;
+        z-index: 4;
+	}
+    .bottommenu >button{
+        position: relative;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        color: rgba(0, 0, 0, 0);
+        margin: 0 5px;
+        padding: 0;
+        border: 0;
+        border-radius: 16px;
+    }
+    .bottommenu >button:nth-child(4){
+        top: -2px !important;  
+    }
+    .bottommenu>button img{
+        width: 70%;
+        height: 70%;
+        padding: 15%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+        .userlogin{
+            position: absolute;
+            right: 9px;
+        }
+            .username{
+                padding-right: 10px;   
+            }
+            .login{
+                position: relative;
+                top: -1px;
+                width: 34px;
+                height: 34px;
+                color: rgba(0, 0, 0, 0);
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background: rgba(0, 0, 0, 0);
+            }
+            .login>img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    footer{
+		margin: 30px 0 50px 0px;
+        border-top: 1px solid #808080;
+        position: relative;
+    }
+	footer p{
+		text-align: center;
+        color: #808080;
+	}
+    #point{
+        box-sizing: content-box;
+        margin: 2px;
+        background-color: blue;
+    }
+/*List Open or Close*/
+.listOn{
+    
+}
+.listOff{
+    display: none !important;   
+}
+.clip{
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -6px;
+    left: 86px;
+}
+    .clip>img{
+        width: 100%;
+        height: 100%;
+    }
+
+/*
+#test{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    background: blue;
+}
+*/
+/*}*/
+/*Tablet*/
+/*
+@media (min-width: 768px) and (max-width: 1024px){
+		h1{color: #F28972;}
+	.gamebtn{
+		display: none;
+	}
+
+}
+DESKTOP
+@media (min-width: 1025px){
+	h1{color: #0f0;}
+	.gamebtn{
+		display: none;
+	}
+
+}
+*/

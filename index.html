@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="index.css">	
+	<title>31nov</title>
+</head>
+<body>
+	<div class="header_body">
+		<a href="#main" class="hiddenmenu">메뉴 건너띄기</a>
+		<header>
+			<div class="header_single v">
+				<h1><img class="titleimage" src="31nov_ver01.png">31nov 메인 페이지</h1>
+								  <button class="gamebtn" type="button">
+                      <img src="./image/gamebtn.png">
+                      <span class="gamebtnToggle">추천메뉴 열기</span>
+				  </button>
+				<form class="search" action="search.html">
+					<input type="search" required placeholder="search...">
+					<button type="submit" value="찾아라!">
+				  		찾기 전송
+				  		<img src="./image/searchbtn.png">
+					</button>  
+				</form>
+			</div>
+            <ul class="gamelist">
+                <li>Recommended <br><b>Game</b></br></li>
+                    <ul id="gamelistul">
+                        <li>
+                            <a href="game0">
+                                <img class="gameImg" src="#">
+                                <em class="gameTitle"></em>
+                                <span class="comment"></span>
+                            </a>
+                        </li>
+                    </ul>
+            </ul>
+		</header>
+		<main id="main">
+            <ul>
+                <li><!--게시판 리스트-->
+                    <div class="scatchTape">
+                        <div class="triangle1"></div>
+                        <div class="triangle2"></div>
+                        <div class="triangle3"></div>
+                        <div class="triangle4"></div>
+                        <div class="triangle5"></div>
+                        <div class="triangle6"></div>
+                    </div>
+                    <div class="clip">
+                        <img src="./image/clip.png">
+                    </div>
+                    <div>
+                        <div class="circle1 a e"></div>
+                        <div class="circle1 b e"></div>
+                        <div class="circle1 c e"></div>
+                        <div class="circle1 a d"></div>
+                        <div class="circle1 b d"></div>
+                        <div class="circle1 c d"></div>
+                    </div>
+                    <a class="writeUserInfor">
+                        <img class="userPic"><!--작성자 사진-->
+                        <span>
+                            <p class="userName"></p><br><!--작성자 명-->
+                        </span>
+                        <div class="circle"></div>
+                    </a>
+                    <p class="writeDate"></p><br><!--작성 일자, 시간-->
+                    <div class="writeTitleDiv">
+                        <span class="writeTitle"></span><!--게시글 제목-->
+                    </div>
+                    <div class="overView">
+                        <article>
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                            7<br>
+                        </article>
+                        <!--친구 확인 여부-->
+                        <div class="countView"><!--block-->
+                            <div>
+                                <span><img src="./image/commentIcon.png"><!--댓글 아이콘--></span>
+                                <span class="commentCount"></span><!--댓글 개수-->
+                            </div>
+                            <div>
+                                <span><img src="./image/smileIcon.png"><!--smile 아이콘--></span>
+                                <span class="smileCount"></span><!--smile 개수-->
+                            </div>
+                        </div>
+                        <div class="connectUser">
+                            friends..<br>
+                            <ul>
+                                <li>
+                                    <a><img class="connectPic" src="./image/user6.png"></a>
+                                </li>
+                                <li>
+                                    <a><img class="connectPic" src="./image/user8.png"></a>
+                                </li>
+                                <li>
+                                    <a><img class="connectPic" src="./image/user4.png"></a>
+                                </li>
+                                <li>
+                                    <a><img class="connectPic" src="./image/user4.png"></a>
+                                </li>
+                                <li>
+                                    <a><img class="connectPic" src="./image/user4.png"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+		<nav class="lnb">
+ 				  <button class="lnbbtn" type="button">
+				  	<img src="./image/lnbbtn2.png">
+                      <span class="lnbbtnToggle">메뉴 열기</span> 
+				  </button>
+
+					<h2>전체 메뉴</h2>
+					<ul class="lnbMenu">
+						<li>
+                            <a href="news">뉴스</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
+							<ul>
+								<li><a href="news1">한국 뉴스</a></li>
+								<li><a href="news2">중국 뉴스</a></li>
+								<li><a href="news3">일본 뉴스</a></li>
+								<li><a href="news4">미국 뉴스</a></li>	
+							</ul>
+						<li>
+                            <a href="review">리뷰</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
+							<ul>
+								<li><a href="review1">한국 리뷰</a></li>
+								<li><a href="review2">중국 리뷰</a></li>
+								<li><a href="review3">일본 리뷰</a></li>
+								<li><a href="revu기ew4">미국 리뷰</a></li>
+							</ul>
+						<li>
+                            <a href="forum">포럼</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
+							<ul>
+								<li><a href="forum1">게임 포럼</a></li>
+								<li><a href="forum2">스마트폰 포럼</a></li>
+								<li><a href="forum3">자동차 포럼</a></li>
+							</ul>
+						<li>
+                            <a href="community">커뮤니티</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
+					</ul>	
+				</nav>
+		<aside class="aside">
+			<h2>바로 가기</h2>
+			<ul>
+				<li><a href="#">참고 링크1</a></li>
+				<li><a href="#">참고 링크2</a></li>
+				<li><a href="#">참고 링크3</a></li>
+			</ul>
+		</aside>
+        
+		<div class="bottommenu v">
+<!--
+			<button class="gototop" type="button">
+				<img src="gototop.png">
+				최상단으로 이동하기
+			</button>
+-->
+			<button type="button">
+				리플레쉬
+                <a href="javascript:location.reload()">
+				<img src="./image/refresh.png">
+                </a>
+			</button>
+			<button type="button">
+				<img src="./image/setting.png">
+				셋업 창 열기
+			</button>
+            <button type="button">
+				<img src="./image/starbtn.png">
+				즐겨찾기 버튼
+			</button>
+            <button type="button">
+				<img src="./image/friendbtn.png">
+				친구가 좋아하는 항목보기
+			</button>
+			<span class="userlogin">
+				<strong class="username">
+					31nov 
+				</strong> 
+				<button class="login" type="submit">
+					<img src="./image/login.png">
+					로그아웃하기
+				</button>
+			</span>
+		</div>
+    	<footer>
+			<p>Copyright &copy; 31nov All rights reserved.</p>
+		</footer>
+	</div>
+<!--
+    <div id="test">
+        확인
+    </div>
+-->
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!--			#main-->
+            
+<!--
+            <p> 득점 현황 : </p><span class="totalPoint">0점</span>
+            <div id="point" class='1point'>1점</div>
+            <div id="point" class='2point'>2점</div>
+            <div id="point" class='3point'>3점</div>
+            <div>점수대 별 골 수</div>
+            <div class="total1Point">1점 득점 : 0골</div>
+            <div class="total2Point">2점 득점 : 0골</div>
+            <div class="total3Point">3점 득점 : 0골</div>
+-->
